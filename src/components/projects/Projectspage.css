@@ -1,14 +1,14 @@
 .projects-container {
     min-height: 100vh;
     margin-top: 10vh;
-    width: 100%;
-    padding:6vh 6vh 6vh 6vh;
+    width: 100%;   
+    padding:3vh 6vh 6vh 6vh;
     display:grid;
-    gap:8vh;
+    gap:4vh;
     place-items: center;
     place-content: center;
-    grid-template-columns: repeat(2,1fr);
-    background: linear-gradient(rgb(34, 26, 71), rgba(49, 5, 139, 0.646));
+    grid-template-columns: repeat(3,1fr);
+    background: linear-gradient(rgb(26, 21, 50), rgba(49, 5, 139, 0.646));
 }
 .project{
   box-sizing: border-box;
@@ -18,11 +18,26 @@
   text-align: center;
   border: 1px solid #ccc;
   text-align:left;
-  height:200px;
-  
-  width:30vw;
+  height:25vh;
+  min-height:70vh;
+  width:28vw;
   border-radius: 20px;
   box-shadow:32px 32px 0 0  black;
+  word-wrap: break-word;
+}
+
+.project h5{
+  word-wrap: wrap;
+}
+.project-image {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+   /* or a specific width */
+  height: auto;
+  min-height:30vh; /* maintain aspect ratio */
+  margin-bottom: 15px; /* spacing between image and other elements */
 }
 .project:nth-child(1){
     animation: flip 1s ease;
@@ -48,11 +63,13 @@
         grid-template-columns: repeat(1,1fr);
         margin-top:0vh;
         padding:20vh 6vh 6vh 6vh ;
+        gap:10vh;
     }
     .project{
         display:flex;
         flex-direction: column;
         min-width:80%;
+        height:auto;
     }
     
 }
