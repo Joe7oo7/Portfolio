@@ -1,14 +1,13 @@
 .projects-container {
-    min-height: 100vh;
-    margin-top: 10vh;
-    width: 100%;   
-    padding:3vh 6vh 6vh 6vh;
-    display:grid;
-    gap:4vh;
-    place-items: center;
-    place-content: center;
-    grid-template-columns: repeat(3,1fr);
-    background: linear-gradient(rgb(26, 21, 50), rgba(49, 5, 139, 0.646));
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  row-gap: 9%;
+  padding-top:20vh;
+  box-sizing: border-box;
+  background: linear-gradient(black, rgba(0, 0, 255, 0.646));
 }
 .project{
   box-sizing: border-box;
@@ -18,8 +17,8 @@
   text-align: center;
   border: 1px solid #ccc;
   text-align:left;
-  height:25vh;
-  min-height:70vh;
+  height:68vh;
+  max-height: 70vh;
   width:28vw;
   border-radius: 20px;
   box-shadow:32px 32px 0 0  black;
@@ -33,9 +32,9 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  width: 99%;
+  width: 100%;
    /* or a specific width */
-  height: auto;
+  height:auto;
   min-height:30vh; /* maintain aspect ratio */
   margin-bottom: 15px; /* spacing between image and other elements */
 }
@@ -58,23 +57,56 @@
     justify-content:center;
     align-items: center;
 }
+@media (min-width:1025px){
+  .projects-container{
+    
+  }
+  .project{
+
+  }
+}
 @media (max-width:1025px){
     .projects-container{
         grid-template-columns: repeat(1,1fr);
         margin-top:0vh;
-        padding:20vh 6vh 6vh 6vh ;
+        padding:20vh 6vh 4vh 6vh ;
         gap:10vh;
     }
     .project{
-        display:flex;
-        flex-direction: column;
-        min-width:80%;
-        height:auto;
+      color: white;
+      border: 2px solid white;
+      border-radius: 30px;
+      background-color: rgba(0, 0, 0, 0.333);
+      display: flex;
+      width:80%;
+      padding: 5vh;
+      min-height: 45vh;
+      height:auto;
+      flex-direction: column;
+      text-wrap: wrap;
+      box-shadow: 32px 32px 0 0 rgba(0, 0, 0, 0.447);
+      transition: 0.9s ease;
+      position: relative;
+    }
+    .project-image{
+      min-height:20vh;
+      width:100%;
     }
     
 }
 
-
+@media(max-width:576px){
+  .projects-container{
+    padding:25vh 3vh 4vh 3vh;
+  }
+     .project{
+      width:95%;
+      padding:20px;
+      max-height:60vh;
+      min-height:45vh;
+    
+     }
+}
 /* animations */
 
 @keyframes downside {

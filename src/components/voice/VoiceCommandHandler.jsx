@@ -32,7 +32,7 @@ const VoiceCommandHandler = () => {
       callback: () => navigate("/contact"),
     },
     {
-      command: ["open skills", "skills", "goto skills", "navigate to skills"],
+      command: ["open skills","skills","goto skills", "navigate to skills"],
       callback: () => navigate("/skills"),
     },
     {
@@ -45,8 +45,14 @@ const VoiceCommandHandler = () => {
       callback: () => navigate("/education"),
     },
     {
-      command: ["degree"],
-      callback: () => navigate("/degree"),
+      command: [
+        "open projects",
+        "project",
+        "projects",
+        "goto projects",
+        "navigate to projects",
+      ],
+      callback: () => navigate("/projects"),
     },
   ];
   // commands ends
@@ -71,7 +77,9 @@ const VoiceCommandHandler = () => {
       SpeechRecognition.stopListening();
     } else
       try {
-        SpeechRecognition.startListening({ continuous: true });
+        SpeechRecognition.startListening({
+          continuous: !/Android|iPhone/i.test(navigator.userAgent),
+        });
       } catch (error) {
         console.error("Error starting speech recognition:", error);
       }

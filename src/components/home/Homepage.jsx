@@ -3,8 +3,9 @@ import Typed from "typed.js";
 import VanillaTilt from "vanilla-tilt";
 import { FaHtml5 } from "react-icons/fa";
 import "./Homepage.css";
+import hfl from '/public/assets/icons/Hugging.png'
 import cv from "/public/assets/Josephrex A CV.pdf";
-import {    
+import {
   FaLinkedin,
   FaStackOverflow,
   FaGithub,
@@ -30,7 +31,7 @@ const HomeComponent = () => {
 
     // Typed.js effect starts
     const options = {
-      strings: ["FullStack Developer", "WebDesigner", "Youtuber"],
+      strings: ["FullStack Developer", "WebDesigner", "Content Creator"],
       typeSpeed: 30,
       backSpeed: 20,
       showCursor: true,
@@ -53,9 +54,9 @@ const HomeComponent = () => {
       <div className="mob-home-image">
         <img src="./jo2.jpg" className="img-fluid" alt="" />
       </div>
-  {/* for mobiles homepage image  starts */}
+      {/* for mobiles homepage image  starts */}
 
-  {/* for pcs homepage tilt effect image section starts */}
+      {/* for pcs homepage tilt effect image section starts */}
       <div className="home-img">
         <div className="box" ref={boxRef}>
           <div className="box1">
@@ -102,9 +103,9 @@ const HomeComponent = () => {
           </div>
         </div>
       </div>
-  {/* for pcs homepage tilt effect image section ends */}
+      {/* for pcs homepage tilt effect image section ends */}
 
-  {/* hero section starts */}
+      {/* hero section starts */}
 
       <div className="home-content mb-5">
         <h1>
@@ -137,8 +138,14 @@ const HomeComponent = () => {
           >
             <FaGithub></FaGithub>
           </a>
-          <a href="https://dev.to/joe7oo7" target="_blank">
-            <FaDev></FaDev>
+          <a href="https://huggingface.co/Joe7oo7" target="_blank" rel="noopener noreferrer"
+          style={{backgroundColor:"#8077e083;",padding:"5px"}}>
+            <img
+              src={hfl}
+              alt="Hugging Face Logo"
+              className="img-fluid huggingface-icon" // Optionally add custom styles here
+              style={{ width: "30px", height: "30px",padding:'10px;',borderRadius:"50%" }} // Adjust the size as needed
+            />
           </a>
           <a
             href="https://stackoverflow.com/users/23394959/josephrex"

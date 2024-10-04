@@ -18,8 +18,9 @@
 }
 .voice-btn{
     border-radius: 10px;
-    background: linear-gradient(rgb(76, 76, 141), rgba(255, 255, 255, 0.646));
+    background: linear-gradient(rgb(15, 4, 42), rgba(160, 39, 231, 0.632));
     padding:4px;
+    color:white;
 }
 .voice-btn:hover{
     background: linear-gradient(rgb(42, 35, 77), rgb(198, 178, 244));
@@ -31,14 +32,17 @@
 @media(max-width:1025px){
  .voice-container{
     border-radius: 50%;
-    border:none;
+    border: none;
  }
  .voice-btn{
     border-radius: 50%;
-    padding:20%;
-    color:rgb(0, 0, 0);
+    height:90px;
+    width:90px;
+    color:rgb(255, 255, 255);
     font-size:15px;
-    box-shadow:  -32px 12px 0 0 ;     
+    border:5px solid white;  
+    background: linear-gradient(rgb(15, 4, 42), rgba(160, 39, 231, 0.632));
+    padding:4px;
 }
 }
 

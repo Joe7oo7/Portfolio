@@ -60,6 +60,7 @@
     min-height: 10vh;
     width: 80%;
     transition: 0.5s ease-in-out;
+    animation: from-right 1s ease-in-out;
   }
   .study:hover {
     transform: scale(1.2);
@@ -74,12 +75,14 @@
     grid-template-columns: repeat(1, 1fr);
     row-gap: 8vh;
     padding: 20vh 0 20vh 0;
+
   }
   .study {
     min-height: 10vh;
     width: 80%;
     transition: 0.5s ease-in-out;
     gap: 20px;
+    animation: from-left 1s ease-in-out;
   }
 }
 /* for Mobiles and tabs design ends */
